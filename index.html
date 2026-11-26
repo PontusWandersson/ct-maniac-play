@@ -4193,7 +4193,7 @@ body.inf-mode #meterFs.fs-img .fs-mult { box-shadow: none; filter: drop-shadow(0
     '3 LAYER-taggar öppnar nästa LAYER.': '3 LAYER tags open the next LAYER.',
     '3 LAYER-taggar öppnar nästa LAYER.<br>2 ur LAYER 5 öppnar INFINITY: +3 FRISPINN': '3 LAYER tags unlock the next LAYER.<br>2 from LAYER 5 unlock INFINITY: +3 FREE SPINS',
     '<p><b>3 LAYER-taggar</b> öppnar nästa LAYER</p>': '<p><b>3 LAYER tags</b> open the next LAYER</p>',
-    'Stegen: kassetten öppnar så många LAYER som den spolar. Därefter öppnar 3 taggar ur det översta öppna lagret nästa LAYER (en tagg är en symbol som en vinst hämtar ur lagret) (från nästa lavinsteg), upp till LAYER {d}. Saknas symbolen på brädet hämtas den från närmaste öppna lager bakåt som har den (siffran vid hörnet visar hur långt bakåt).': 'The layer ladder: the cassette opens as many LAYERS as it rewinds. After that, 3 tags from the topmost open layer open the next LAYER (a tag is a symbol that a win takes from the layer) (from the next cascade step), up to LAYER {d}. If the symbol is missing on the board, it is taken from the nearest open layer back that has it (the number at the corner shows how far back).',
+    'Stegen: kassetten öppnar så många LAYER som den spolar. Därefter öppnar 3 taggar ur det översta öppna lagret nästa LAYER från nästa lavinsteg (en tagg är en symbol som en vinst hämtar ur lagret), upp till LAYER {d}. Saknas symbolen på brädet hämtas den från närmaste öppna lager bakåt som har den (siffran vid hörnet visar hur långt bakåt).': 'The layer ladder: the cassette opens as many LAYERS as it rewinds. After that, 3 tags from the topmost open layer open the next LAYER from the next cascade step (a tag is a symbol that a win takes from the layer), up to LAYER {d}. If the symbol is missing on the board, it is taken from the nearest open layer back that has it (the number at the corner shows how far back).',
     'Spolar kassetten 3 lager har frispinnens hjul fler wilds.': 'If the cassette rewinds 3 layers, the free spins have more wilds on the reels.',
     'BONUSSPEL': 'BONUS GAME',
     'Bonusspel': 'Bonus Game',
@@ -4457,8 +4457,8 @@ body.inf-mode #meterFs.fs-img .fs-mult { box-shadow: none; filter: drop-shadow(0
       'Väggen har {d} lager bakåt. Saknas symbolen på brädet hämtas den från närmaste lager bakåt som har den (siffran vid hörnet visar hur långt bakåt).':
         'The wall has {d} layers of older posters. If the symbol is missing on the board, it is taken from the nearest layer down that has it (the number at the corner shows the layer).',
       'INFINITY-bonussymbolen startar Infinity-bonusen med {n} frispinn och {d} lager bakåt.': 'The INFINITY bonus symbol starts the Infinity Bonus with {n} free spins and {d} layers.',
-      'Stegen: kassetten öppnar så många LAYER som den spolar. Därefter öppnar 3 taggar ur det översta öppna lagret nästa LAYER (en tagg är en symbol som en vinst hämtar ur lagret) (från nästa lavinsteg), upp till LAYER {d}. Saknas symbolen på brädet hämtas den från närmaste öppna lager bakåt som har den (siffran vid hörnet visar hur långt bakåt).':
-        'The layer ladder: the cassette opens as many LAYERS as it rewinds. After that, 3 tags from the topmost open layer open the next LAYER (a tag is a symbol that a win takes from the layer) (from the next cascade step), up to LAYER {d}. If the symbol is missing on the board, it is taken from the nearest open layer down that has it (the number at the corner shows the layer).',
+      'Stegen: kassetten öppnar så många LAYER som den spolar. Därefter öppnar 3 taggar ur det översta öppna lagret nästa LAYER från nästa lavinsteg (en tagg är en symbol som en vinst hämtar ur lagret), upp till LAYER {d}. Saknas symbolen på brädet hämtas den från närmaste öppna lager bakåt som har den (siffran vid hörnet visar hur långt bakåt).':
+        'The layer ladder: the cassette opens as many LAYERS as it rewinds. After that, 3 tags from the topmost open layer open the next LAYER from the next cascade step (a tag is a symbol that a win takes from the layer), up to LAYER {d}. If the symbol is missing on the board, it is taken from the nearest open layer down that has it (the number at the corner shows the layer).',
       // inga låtsaspengar på Stake
       'Mellanslag snurrar. Tryck igen medan hjulen snurrar för att stoppa direkt. Familjespel för skojs skull: mynten är låtsaspengar.':
         'Space spins. Press again while the reels spin to stop at once.'
@@ -5939,7 +5939,7 @@ body.inf-mode #meterFs.fs-img .fs-mult { box-shadow: none; filter: drop-shadow(0
   }
   // ---------------------------------------------------------------- ljud
   // bygget skriver in sitt id här (tools/build.js), så att ljudlistan hämtas på nytt efter varje bygge men kan sparas däremellan
-  var LJUD_BYGGE = "ad2c20de";
+  var LJUD_BYGGE = "67701bb4";
   // LJUD_AV: spelet är helt tyst (användaren 2026-11-17: "ta bort allt ljud i slotten permanent nu så den inte går att
   // spela med ljud", i väntan på ljuddesignerns ljud). Ljudmotorn går som förut men utgången är alltid tyst, inga ljudfiler
   // hämtas, och ljudknappen, volymreglaget och ljudvalen i menyn syns inte (ljudAvUi). false ger ljudet tillbaka.
@@ -14293,8 +14293,8 @@ var Vinstmatare = (function () {
   var INF_BIG_X = 500;
   // ---- reglerna (Regler och vinsttabell) och guiden (Så funkar spelet)
   function infRuleLadder() {
-    return LANG === 'en' ? 'The layer ladder: the cassette opens as many LAYERS as it rewinds. After that, 3 tags from the topmost open layer open the next LAYER (a tag is a symbol that a win takes from the layer) (from the next cascade step). If the symbol is missing on the board, it is taken from the nearest open layer down that has it (the number at the corner shows which).'
-      : 'Stegen: kassetten öppnar så många LAYER som den spolar. Därefter öppnar 3 taggar ur det översta öppna lagret nästa LAYER (en tagg är en symbol som en vinst hämtar ur lagret) (från nästa lavinsteg). Saknas symbolen på brädet hämtas den från närmaste öppna lager bakåt som har den (siffran vid hörnet visar vilket).';
+    return LANG === 'en' ? 'The layer ladder: the cassette opens as many LAYERS as it rewinds. After that, 3 tags from the topmost open layer open the next LAYER from the next cascade step (a tag is a symbol that a win takes from the layer). If the symbol is missing on the board, it is taken from the nearest open layer down that has it (the number at the corner shows which).'
+      : 'Stegen: kassetten öppnar så många LAYER som den spolar. Därefter öppnar 3 taggar ur det översta öppna lagret nästa LAYER från nästa lavinsteg (en tagg är en symbol som en vinst hämtar ur lagret). Saknas symbolen på brädet hämtas den från närmaste öppna lager bakåt som har den (siffran vid hörnet visar vilket).';
   }
   function infRulesExtra() {
     return LANG === 'en' ? '<li>INFINITY: every board that falls off behind LAYER 5 during the bonus goes into INFINITY. INFINITY is opened by ' + M.CFG.ladXInf + ' tags from LAYER 5 (the other layers need 3), never by the cassette, and opening it gives ' + M.CFG.infOpenSpins + ' more free spins. In the free spins that start with INFINITY open, the wins are the paytable times ' + fmtScale(M.CFG.infScale * M.CFG.infOpenScale) + ', then times the multi and the numbers. When it is open and the symbol is missing in all five layers, the reel searches on through INFINITY, starting with the newest board.</li>' +
@@ -16423,7 +16423,7 @@ var Vinstmatare = (function () {
       '<section><h3>Wild</h3><div class="sym-rule"><img src="' + icon(WILD) + '" alt=""><p>' + txl('<b>Wild</b> finns på hjul 2–6 och ersätter alla symboler utom ODD BONUS-symbolen och INFINITY-bonussymbolen.') + '</p></div></section>' +
       '<section><h3>' + txl('Bonusspel') + '</h3>' +
       '<div class="sym-rule"><img src="' + icon(SCAT) + '" alt=""><p>' + txl('<b>ODD BONUS-symbolen</b>: 3 ODD BONUS-symboler var som helst på brädet när lavinerna är slut ger {n} frispinn. Det ligger aldrig fler än 3 ODD BONUS-symboler på brädet. Kommer INFINITY-bonussymbolen som fjärde startar Infinity-bonusen i stället. 3 ODD BONUS-symboler i ett frispinn ger {r} frispinn till.', { n: M.CFG.fsSpins, r: M.FS_RETRIGGER }) + '</p></div><ul style="margin-top:10px">' +
-      '<li>' + txl('Stegen: kassetten öppnar så många LAYER som den spolar. Därefter öppnar 3 taggar ur det översta öppna lagret nästa LAYER (en tagg är en symbol som en vinst hämtar ur lagret) (från nästa lavinsteg), upp till LAYER {d}. Saknas symbolen på brädet hämtas den från närmaste öppna lager bakåt som har den (siffran vid hörnet visar hur långt bakåt).', { d: M.CFG.fsDepth }) + '</li>' +
+      '<li>' + txl('Stegen: kassetten öppnar så många LAYER som den spolar. Därefter öppnar 3 taggar ur det översta öppna lagret nästa LAYER från nästa lavinsteg (en tagg är en symbol som en vinst hämtar ur lagret), upp till LAYER {d}. Saknas symbolen på brädet hämtas den från närmaste öppna lager bakåt som har den (siffran vid hörnet visar hur långt bakåt).', { d: M.CFG.fsDepth }) + '</li>' +
       // samma kassett som i INFINITY-bonusen (M.CFG.fsLayerMult)
       fsRule +
       '<li>' + txl('Spolar kassetten 3 lager har frispinnens hjul fler wilds.') + '</li>' +
